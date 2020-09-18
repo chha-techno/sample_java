@@ -1,0 +1,22 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Entering install phase
+  build:
+    commands:
+      - echo Build started ....
+      - mvn -f pom.xml compile
+      - mvn -f pom.xml test 
+  post_build:
+    commands:
+      - echo Build completed....
+      - mvn package
+artifacts:
+  type: zip
+  files:
+    - "appspec.yml"
+    - "target/sample_webapp.war"
+    - "scripts/start_server"
+    - "scripts/install_dependencies"

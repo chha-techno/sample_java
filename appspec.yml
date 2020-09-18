@@ -1,0 +1,13 @@
+version: 0.0
+os: linux
+files:
+  - source: target/sample_webapp.war
+    destination: /home/ubuntu/javapp
+hooks:
+  AfterInstall:
+     - location: scripts/install_dependencies
+         timeout: 300
+         runas: root
+     - location: scripts/start_server
+         timeout: 300
+         runas: root
