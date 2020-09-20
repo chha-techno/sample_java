@@ -20,7 +20,7 @@ phases:
      commands:
        - echo Entering post_build phase...
        - echo Build completed on 'date'
-  artifacts:
+artifacts:
      type: zip
      files:
         - appspec.yml
