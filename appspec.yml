@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: Helloworld.war
+  - source: target/Helloworld.war
     destination: /home/ubuntu/javaapp
 hooks:
   AfterInstall:
