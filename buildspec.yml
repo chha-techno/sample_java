@@ -1,25 +1,28 @@
----
 version: 0.2
 
 phases:
   install:
     commands:
-      - echo Entering install phase
+       - echo Entering install phase...
+       - echo Nothing to do in the install phase...
   pre_build:
     commands:
-      - echo Entering pre-build phase
+       - echo Entering pre_build phase...
+       - echo Nothing to do in the pre_build phase...
   build:
-    commands:
-      - echo Build started ....
-      - mvn -f pom.xml compile
-      - mvn -f pom.xml package 
+     commands:
+       - echo Entering build phase...
+       - echo Build started on 'date'
+       - mvn -f pom.xml compile
+       - mvn -f pom.xml package
   post_build:
-    commands:
-      - echo Build completed....
+     commands:
+       - echo Entering post_build phase...
+       - echo Build completed on 'date'
 artifacts:
   type: zip
   files:
-    - 'appspec.yml'
-    - 'scripts/start_server'
-    - 'scripts/install_dependencies'
-    - 'target/sample_webapp.war'
+    - appspec.yml
+    - start_server
+    - install_dependencies
+    - Helloworld.war
