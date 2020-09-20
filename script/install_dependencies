@@ -1,14 +1,13 @@
 #!/bin/bash
-
-cd /home/ubuntu/javapp
-sudo apt-get install -y openjdk-8-jre
-sudo apt-get install tar
-sudo apt-get install wget
-wget https://s3.us-east-2.amazonaws.com/apache-tomcat-8.5.58.tar.gz 
-sudo mkdir /opt/tomcat
-sudo tar xzvf apache-tomcat-8*tar.gz -C /opt/tomcat --strip-components=1
+cd /home/ubuntu/javaapp
+sudo apt-get install -y openjdk-8-jre-headless
+sudo apt-get install -y tar
+sudo apt-get install -y wget
+wget https://s3.amazonaws.com/dhqs-mirror-iad/apache-tomcat-8.0.39.tar.gz
+mkdir /opt/tomcat
+tar xvf apache-tomcat-8.0.39.tar.gz -C /opt/tomcat --strip-components=1
 cd /opt/tomcat
-sed -i 's|port="8080"|port="80"|g' /opt/tomcat/config/server.xml
-ls -ltrh /home/ubuntu/javapp/
-ls -ltrh /opt/tomcat/
-mv /home/ubuntu/javapp/sample_webapp.war //opt/tomcat/webapps/
+sed -i 's|port="8080"|port"80"|g' /opt/tomcat/conf/server.xml
+ls -ltrh /home/ubuntu/javaapp/
+ls -lrth /opt/tomcat/
+mv /home/ubuntu/javaapp/Helloworld.war /opt/tomcat/webapps/
