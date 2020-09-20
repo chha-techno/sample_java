@@ -1,3 +1,4 @@
+---
 version: 0.2
 
 phases:
@@ -22,7 +23,7 @@ phases:
   artifacts:
      type: zip
      files:
-        - 'appspec.yml'
-        - 'script/start_server'
-        - 'script/install_dependencies'
-        - 'target/Helloworld.war'
+        - appspec.yml
+        - script/start_server
+        - script/install_dependencies
+        - target/Helloworld.war
