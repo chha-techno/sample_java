@@ -19,10 +19,10 @@ phases:
      commands:
        - echo Entering post_build phase...
        - echo Build completed on 'date'
-artifacts:
-  type: zip
-  files:
-    - appspec.yml
-    - start_server
-    - install_dependencies
-    - Helloworld.war
+  artifacts:
+     type: zip
+     files:
+        - 'appspec.yml'
+        - 'scripts/start_server'
+        - 'scripts/install_dependencies'
+        - 'target/Helloworld.war'
