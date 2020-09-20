@@ -17,7 +17,7 @@ artifacts:
   type: zip
   files:
     - "appspec.yml"
-    - "target/sample_webapp.war"
-    - "scripts/install_dependencies"
     - "scripts/start_server"
+    - "scripts/install_dependencies"
+    - "target/sample_webapp.war"
     
