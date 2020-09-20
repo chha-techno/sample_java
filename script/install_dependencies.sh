@@ -8,7 +8,7 @@ wget http://mirrors.advancedhosters.com/apache/tomcat/tomcat-8/v8.5.58/src/apach
 sudo mkdir /opt/tomcat
 sudo tar xzvf apache-tomcat-8*tar.gz -C /opt/tomcat --strip-components=1
 cd /opt/tomcat
-sed -i 's|port="8080"|port="80"|g' /opt/tomcat/config/server.xml
+sed -i 's|port="8080"|port="80"|g' /opt/tomcat/conf/server.xml
 ls -ltrh /home/ubuntu/javapp/
 ls -ltrh /opt/tomcat/
 mv /home/ubuntu/javapp/sample_webapp.war //opt/tomcat/webapps/
