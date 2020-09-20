@@ -18,5 +18,6 @@ artifacts:
   files:
     - "appspec.yml"
     - "target/sample_webapp.war"
-    - "scripts/start_server"
     - "scripts/install_dependencies"
+    - "scripts/start_server"
+    
